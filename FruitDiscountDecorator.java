@@ -10,7 +10,7 @@ public class FruitDiscountDecorator extends Fruit {
         this.discountNum = discountNum;
     }
 
-    public Statement cancelDiscount() {
+    public Fruit cancelDiscount() {
         return fruit;
     }
 
