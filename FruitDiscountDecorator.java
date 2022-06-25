@@ -1,11 +1,11 @@
 // 打折类水果，属水果继承自水果
-public class Discount extends Fruit {
+public class FruitDiscountDecorator extends Fruit {
 
     private Fruit fruit;
 
     private double discountNum; // 这里使用小数记录打折，8则为0.8
 
-    public Discount(Fruit fruit, double discountNum) {
+    public FruitDiscountDecorator(Fruit fruit, double discountNum) {
         this.fruit = fruit;
         this.discountNum = discountNum;
     }

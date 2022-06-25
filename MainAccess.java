@@ -34,7 +34,7 @@ public class MainAccess {
             请编写函数，对于 C 购买的水果斤数 (水果斤数为大于等于 0 的整数)，计算并返回所购买商品的总价。
          */
         // 打折活动开始
-        strawberry = new Discount(strawberry, 0.8);
+        strawberry = new FruitDiscountDecorator(strawberry, 0.8);
         // 顾客C
         StatementTotal consumerC = new StatementTotal();
         consumerC.buy(apple, 1);
@@ -47,7 +47,7 @@ public class MainAccess {
             现在顾客 D 在超市购买了若干斤苹果、 草莓和芒果，需计算一共需要多少钱？
             请编写函数，对于 D 购买的水果斤数 (水果斤数为大于等于 0 的整数)，计算并返回所购买商品的总价。
          */
-        StatementTotal consumerD = new StatementTotalActivity(100, 10);
+        StatementTotal consumerD = new StatementTotalActivityDecorator(100, 10);
         consumerD.buy(apple, 1);
         consumerD.buy(strawberry, 3);
         consumerD.buy(mango, 6);
